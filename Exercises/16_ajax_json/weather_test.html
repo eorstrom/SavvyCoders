@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Test</title>
+</head>
+<body>
+
+<div>Current Temp
+  <p id="temp"></p>
+</div>
+
+<div id="highs_lows">Highs and Lows
+  <p>Today's high tempurature is <span id="temp_max"></span> with a low of <span id="temp_min"></span></p>
+</div>
+
+<div id="conditions">
+</div>
+
+<div>The wind speed is <span id="wind_speed"></span>.
+</div>
+
+<div id="sunrise_sunset">
+</div>
+
+<button id="Chicago" type="button" name="Chicago">Chicago</button>
+<br>
+<div id="post">
+</div>
+
+<div id="title">
+</div>
+
+<div id="postOnPage">
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    var getWeather = function (weather_data) {
+      $('#temp').text(weather_data.main.temp)
+      $('#temp_max').text(weather_data.main.temp_max)
+      $('#temp_min').text(weather_data.main.temp_min)
+      $('#wind_speed').text(weather_data.main.wind)
+    }
+
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=Nashville&appid=0816e389b1e3302d4a55769a548c8ea1').success(getWeather)
+    // $.click(){
+    //   event.preventDefault();
+    // }
+    // $.get('http://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=0816e389b1e3302d4a55769a548c8ea1').success(getWeather)
+
+
+    var getData = function (data){
+      $('#post').text(data.id)
+      $('#title').text(data.title)
+     }
+    $.get('http://jsonplaceholder.typicode.com/posts/2').success(getData)
+
+
+    var place_post_on_page = function (){
+      var i = 1;
+      for (i = 1; i <= max_post; i++)
+        $.get('http://jsonplaceholder.typicode.com/posts/'+i+'/').success(place_post_on_page)
+    }
+
+  </script>
+</body>
+</html>

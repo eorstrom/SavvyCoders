@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrays Day 2</title>
+</head>
+<body>
+  <div class="color">
+
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.1.js" charset="utf-8"></script>
+  <script type="text/javascript">
+
+    // [Week 3, Mod 4, Exercise 1 - Hello Kitty]
+      // var my_cat = {
+      //   "name" : "Figaro",
+      //   "age" : 3,
+      //   "alive" : true,
+      //   "color" : "black",
+      //   "favorite hobby" : "messing with the goldfish",
+      //   "owner" : "Gepetto"
+      //  }
+      //
+      //   for (var details in my_cat) {
+      //     console.log(my_cat[details]);
+      //   }
+
+     // [Week 3, Mod 4, Exercise 2 - The Dream Life]
+      //  var my_dream_life = {}
+      //
+      //  var property_key = "job";
+      //  my_dream_life[property_key] = "front-end developer";
+      //
+      //  var another_property_key = "salary";
+      //  my_dream_life[another_property_key] = 60000;
+      //
+      //  var next_property = "car";
+      //  my_dream_life[next_property] = "Ferarri";
+      //
+      //  var property_key = "goal 1";
+      //  my_dream_life[property_key] = "become a successful developer";
+      //
+      //  var property_key = "goal 2";
+      //  my_dream_life[property_key] = "own a nice house";
+      //
+      //  var property_key = "goal 3"
+      //  my_dream_life[property_key] = "travel a lot!"
+      //
+      // for (var dreams in my_dream_life)
+      //  console.log(my_dream_life[dreams]);
+
+
+    // [Week 3, Mod 4, Exercise 3 - Cruisin' USA]
+        // var dream_car = {};
+        // dream_car.make = "Ford";
+        // dream_car.model = "Mustang";
+        // dream_car.color = "blue";
+        // dream_car.year = 2008;
+        // dream_car.registered = true;
+        // console.log(dream_car);
+
+        // for (var features in dream_car)
+        //   console.log(dream_car[features]);
+
+        // for (var color in dream_car) {
+        //   $('.color').append(dream_car.color);
+        // }
+
+
+    // [Week 3, Mod 4, Exercise 6 - looping over numbers]
+        // var numbers = [2, 4, 5, 37, 0];
+        // var doubled_numbers = {}; // should be { 2: 4, 4: 8, 5: 10, 37: 74, 0
+        //
+        // function (arr_val) {
+        //   doubled_numbers[arr_val] = arr_val*2;
+        // }
+        //
+        // numbers.forEach();
+
+
+    // [Week 3, Mod 4, Exercise 7, Pt.2 - Famouser Objects]
+        // var obama_jobs = []
+        // var famous = []
+        //
+        // var politicos = {
+        //   secretary_of_state: 'hillary clinton',
+        //   potus: 'barack obama',
+        //   flotus: 'michelle obama',
+        //   vice_prez: 'joe biden',
+        //   gov_of_california: 'jerry brown'
+        // }
+        //
+        // for (var key in politicos) {
+        //   famous.push(politicos[key]);
+        // }
+        // console.log(famous);
+        //
+        // var obama_jobs = [];
+        //
+        // var job_picker = function (politicos_object) {
+        //   for (var job in politicos_object) {
+        //     if(!!politicos_object[job].match('obama')) {
+        //       console.log(job);
+        //       obama_jobs.push(job);
+        //     }
+        //   }
+        // }
+        //  job_picker(politicos);
+        //  console.log(obama_jobs);
+
+    // [Week 3, Mod 4, Exercise 7, Pt.3 - Famousest Objects]
+        // var b_named_politicos = [];
+        // var politicos = {
+        //   secretary_of_state: 'hillary clinton',
+        //   potus: 'barack obama',
+        //   flotus: 'michelle obama',
+        //   vice_prez: 'joe biden',
+        //   gov_of_california: 'jerry brown'
+        // }
+        //
+        // var job_picker_2 = function(politicos_object) {
+        //   for(var job in politicos_object) {
+        //     var name = politicos_object[job];
+        //   if(!!name[0].match('b') || (!!politicos_object[job]( 'b')){
+        //   b_named_politicos[job]=name;
+        //       }
+        //     }
+        //   }
+
+
+        // [Week 3, Mod 4, Exercise 8: Type-tester]
+            var type_tester = function(input) {
+              if (typof input === 'number' || typeof input === 'string' || typof input === 'undefined') || typof input === 'function' || typof input === 'boolean'){
+                console.log(input + ' is a ' typeof input)
+                else {
+                  if(Array.isArray(input) === true) {
+                    console.log(input + ' is an Array')
+                  } else {console.log(input + ' is an Object');}
+                }
+              }
+              console.log(input)
+            }
+
+            type_tester(3)
+            type_tester('hello')
+            type_tester({})
+            type_tester([])
+
+            // [Week 3, Mod 4, Exercise 9: Messin' with object3.js]
+            var complex_object = {
+            string: "I'm a string!",
+            number: 42,
+            array: ["all sorts of stuff", 10, true, undefined, {
+                me: "an object",
+                more: "find me in here!"
+            }, function() {
+                console.log('beepity-beep')
+            }],
+            simple_object: {
+                name: 'bob',
+                location: 'basement'
+            },
+            fn: function() {
+                console.log("fn has been invoked! Checking both kinds of invocation-time inputs...")
+                console.log("what is my calling context?", this)
+                console.log("what are my arguments?", arguments)
+            }
+            }
+
+            complex_object.string
+            complex_object.array[4]
+            complex_object.simple_object.name
+            complex_object.fn("stuff", "more stuff", "even more stuff!")
+
+
+
+  </script>
+</body>
+</html>

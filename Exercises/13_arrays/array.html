@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script type="text/javascript">
+
+      // [Week 3, Mod 3, Exercise 1]
+      // var recipe = ["Boil water", "Add noodles", "Cook noodles thoroughly", "Drain", "Add sauce", "Eat"]
+      //
+      // console.log("First Step: " + recipe[0])
+      //
+      // var last_step = recipe.length - 1;
+      // console.log(recipe[recipe.length-1])
+
+
+      // [Week 3, Mod 3, Exercise 2 - Bucket List]
+        var bucket_list = ["Visit Asia", "Become a master ninja coder"];
+
+        bucket_list.push("Pay off my car by August 2017", "Life goal #4");
+        console.log(bucket_list);
+
+        bucket_list.unshift("Add life goal #1", "add life goal #2")
+        console.log(bucket_list);
+
+        var dying_wish = bucket_list.pop();
+
+        console.log(bucket_list);
+
+        console.log(dying_wish);
+
+        var do_it_now = bucket_list.shift()
+        console.log(bucket_list);
+
+        function printMe(str) {
+          console.log(str);
+        }
+
+        bucket_list.forEach(printMe);
+
+
+      //[Week 3, Mod 3, Exercise 4]
+      // var scrambled_poem = "roses red are bacon crispy i bacon love and is blue violets are";
+      // var scrambled_array = scrambled_poem.split(' ');
+      // console.log(scrambled_array);
+      // var unscrambled_array = [];
+      //
+      // while (scrambled_array.length > 0) {
+      //   var first = scrambled_array.shift();
+      //   var last = scrambled_array.pop();
+      //   unscrambled_array.push(first);
+      //   unscrambled_array.push(last);
+      //   }
+      //
+      //   console.log(unscrambled_array);
+
+
+      //[Week 3, Mod 3, Exercise 4]
+      // var num_array = [1, 2, 3, 4, 5];
+      //
+      // var reverser = function (array) {
+      //   var reversed_array = [];
+      //   for (var i = 0; i < array.length; i++) {
+      //     reversed_array.unshift(array[i])
+      //     console.log(reversed_array);
+      //     }
+      //     return reversed_array;
+      //   }
+      // console.log(reverser(num_array));
+
+  </script>
+</body>
+</html>

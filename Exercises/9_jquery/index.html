@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Document</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js" charset="utf-8"></script>
+  </head>
+  <body>
+  <div id="everything">
+      <h1>A heading!</h1>
+      <p>Here's some text!</p>
+      <p>Here's a second set of text!</p>
+      <div class="holder">
+          <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+          </ul>
+      </div>
+      <div class="holder">
+          <ol>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+              <li>List Item 6</li>
+          </ol>
+      </div>
+      <div id="change-me">This part needs to change!</div>
+      <div id="secret">We should hide this!</div>
+  </div>
+  <script>
+  var a = 4;
+  console.log(a)
+
+        $('body').css('background-color', 'pink')
+        $('h1').css('color','blue')
+        $('#everything').css('font-size', '20px')
+        $('.holder').css('border','black solid 2px')
+        $('li').css('font-weight', 'bold')
+        $('ul').css('font-weight', 'bold')
+
+    </script>
+  </body>
+</html>
+</body>

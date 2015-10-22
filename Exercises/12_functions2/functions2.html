@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #money_img {
+      display: none;
+      width: 400px;
+      height: 300px;
+    }
+
+    #oprah_img {
+      display: none;
+      width: 350px;
+      height: 200px;
+    }
+
+    #opera_img {
+      display: none;
+      width: 550px;
+      height: 350px;
+    }
+
+    #computer_img {
+      width: 500px;
+      height: 500px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .croc {
+      position: fixed;
+      height: 125px;
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+    <div id="target">Sample text.</div>
+
+    <!-- Week 3, Mod 2, Exercise 2 -->
+    <div id="money">Money</div>
+    <img id="money_img" src="http://www.stickyday.com/wp-content/uploads/2015/04/1002.jpg" alt="Money" />
+    <div id="oprah">Oprah</div>
+    <img id="oprah_img" src="http://static.parade.com/wp-content/uploads/2014/05/05-11-14-oprah-ftr.jpg" alt="Oprah with Wine" />
+    <div id="opera">Opera</div>
+    <img id="opera_img" src="http://static01.nyt.com/images/2012/11/21/arts/JOYCE/JOYCE-articleLarge.jpg" alt="Opera Singer" />
+
+    <img id="computer_img" src="http://www.wiu.edu/academics/majors/business_and_technology/images/desktop_computer_512.png" alt="Computer" />
+
+    <img class="croc" src="http://31.media.tumblr.com/7c497a75afd8ed764953ae3f1a552ed4/tumblr_inline_mflkwg1xga1ro8qpo.gif" alt="Crocodile" />
+
+    
+  <!-- <button type="button" name="button">Click Me!</button>
+  <div id="demo"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+
+  // Week 3, Mod 2, Exercise 1
+
+    // document.querySelector('#target').addEventListener('click', function() {
+    //   console.log('same deal')
+    // })
+    //
+    // var beeper = document.querySelector("button").addEventListener("click", function());
+    //
+    //     beep.innerHTML = "Beep";
+
+  // Week 3, Mod 2, Exercise 2
+        $('div').on('click', function() {
+        console.log('A div has been clicked!')
+    })
+
+    // shortcut
+    $('#target').click(function() {
+        $('#target').show().css('color', 'red').text('boom goes the dynamite!')
+    })
+
+    $('#money').click(function() {
+        $('#money_img').show();
+        $('#oprah_img').hide();
+        $('#opera_img').hide();
+    })
+
+    $('#oprah').click(function() {
+        $('#oprah_img').show();
+        $('#money_img').hide();
+        $('#opera_img').hide();
+    })
+
+    $('#opera').click(function() {
+        $('#oprah_img').hide();
+        $('#money_img').hide();
+        $('#opera_img').show();
+    })
+
+    $('#computer_img').hover( function() {
+      $('#computer_img').addClass('hidden')
+    })
+    $('#opera').on('mouseleave', function() {
+      $('#computer_img').removeClass('hidden')
+    })
+
+    var mouse_tracker = function(event) {
+    console.log(event.pageX, event.pageY, !!event.which);
+    };
+
+    $('body').on('mousemove', mouse_tracker);
+
+    $(document).on('mousemove', function(event){
+      $('.croc').css({
+        left: event.pageX + 30,
+        top: event.pageY
+      });
+    });
+
+    var el_finder = function(event) {
+      console.log("calling el_finder for:", this, event.target)
+    $(this).attr('id', 'active');
+    }
+
+    $('div').click(el_finder)
+
+  </script>
+</body>
+</html>

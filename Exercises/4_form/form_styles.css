@@ -1,0 +1,21 @@
+input {
+  diplay: block
+}
+
+label {
+  display: block;
+}
+
+input:focus {
+
+}
+
+input:visited {
+
+}
+
+input:hover {
+
+}
+
+input:active

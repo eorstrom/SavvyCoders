@@ -1,0 +1,37 @@
+.box {
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+h1 {
+  color: lime;
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: purple;
+  border: 2px solid black;
+  height: 300px;
+  width: 300px;
+}
+
+.content {
+  background-color: pink;
+}
+
+.footer {
+  background-color: blue;
+  color: white;
+  border: 2px solid black;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  float: left;
+  clear: left;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  background-color: yellow;
+  margin: 0 auto;
+}

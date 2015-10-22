@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Objects</title>
+</head>
+<body>
+
+
+  <script type="text/javascript">
+    // var person = {
+    //   name: 'Erin',
+    //   location: 'Nashville, TN',
+    //   age: 23,
+    //   hobbies: ['coding', 'Netflix', 'reading'],
+    //   dog: {
+    //     name: 'Sparky',
+    //     hobbies: [],
+    //   }
+    //   // party: function ()
+    // }
+    //
+    // person.work = function () {
+    //   console.log("Hello my name is " + this.name + ". " + "I have a dog named " + this.dog.name + ".");
+    // }
+    // person.work()
+    //
+    // person.workout = function () {
+    //   console.log("I try to workout, but I like watching " + this.hobbies[1] + " better.");
+    // }
+    // person.workout()
+    //
+    // person.float_through_life_on_autopilot = function () {
+    //   this.work();
+    //   this.workout();
+    // }
+    //
+    // person.float_through_life_on_autopilot()
+
+    var dog1 = {
+      name: 'Sparky',
+      location: 'Nashville, TN',
+      favorite_treat: 'Beggin\' Strips',
+      hungry: true,
+      party: function (){
+        console.log(this.name + " hates his feet being touched.")
+      },
+      eat: function (){
+        console.log(this.name + '\'s favorite treats are ' + this.favorite_treat)
+        this.hungry=false
+      }
+    // go_to_the_park
+    }
+
+    var dog2 = {
+      name: 'Roxi',
+      favorite_treat: 'cheese'
+    }
+
+    var eat_fn = function (){
+      console.log(this.name + '\'s favorite treats are ' + this.favorite_treat);
+      this.hungry=true;
+    }
+    dog1.eat = eat_fn
+    dog1.eat()
+    // dog.party
+    dog2.eat = eat_fn
+    dog2.eat()
+
+    var fetch_adder = function (dog) {
+      dog.fetch = function () {
+        console.log(this.name + " fetched the rope.");
+      }
+    }
+
+    fetch_adder(dog1)
+    fetch_adder(dog2)
+
+    dog1.fetch()
+    dog2.fetch()
+
+    cat_1 = {
+      sound: 'Meow'
+    }
+
+    cat_2 = {
+      sound: 'Meow'
+    }
+
+    var meow = function (){
+      console.log("Cats go " + this);
+    }
+
+  </script>
+</body>
+</html>
